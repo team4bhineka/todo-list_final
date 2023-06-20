@@ -4,6 +4,11 @@ html {
   background-color: #D9F0F4;
 }
 
+img{
+  height: 25px;
+  width: 25px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -315,7 +320,7 @@ input[type=checkbox]:hover+label:before {
   }
 
   header h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   nav ul {
@@ -329,7 +334,7 @@ input[type=checkbox]:hover+label:before {
   }
 
   .form-data {
-    display: relative;
+    display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 25px;
@@ -389,14 +394,14 @@ input[type=checkbox]:hover+label:before {
   @media (max-width: 600px) {
 
     .datacontainer {
-      display: relative;
+      display: flex;
       justify-content: center;
       height: 30px;
       margin: 10px 30%
     }
 
     .datatask {
-      display: relative;
+      display: flex;
       justify-content: space-between;
       align-items: center;
       list-style: none;
@@ -411,11 +416,16 @@ input[type=checkbox]:hover+label:before {
       padding: 0;
       box-sizing: border-box;
       font-family: 'Fredoka', sans-serif;
-      font-size: 12px;
+
     }
   }
 
   @media (max-width: 458px) {
+
+    a    {
+      font-size: 16px;
+    }
+
     .datacontainer {
       display: relative;
       justify-content: center;
@@ -454,6 +464,9 @@ input[type=checkbox]:hover+label:before {
       box-sizing: border-box;
       font-family: 'Fredoka', sans-serif;
       font-size: 8px;
+    }
+    #submitbtn{
+      margin: 0 27%;
     }
   }
 }

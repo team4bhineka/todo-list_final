@@ -29,6 +29,10 @@ html{
   height: auto;
 }
 
+a    {
+  font-size: 16px;
+}
+
 .container-nav {
   display: flex;
   justify-content: center;

@@ -9,6 +9,7 @@ html{
   padding: 0;
   box-sizing: border-box;
   font-family: 'Fredoka', sans-serif;
+  
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   font-family: "Futura", sans-serif;
 }
 
+
 .container-card {
   padding: 50px 0;
   display: flex;
@@ -34,6 +36,10 @@ body {
   width: 100%; 
   max-width: 1200px;
   height: auto;
+}
+
+a    {
+  font-size: 16px;
 }
 
 .container-nav {
@@ -202,7 +208,7 @@ a:hover{
     padding: 30px 0;
     margin: 15px 0;
     border-radius: 30px;
-    box-shadow: 2px 4px 4px 2px #e1e1e1;
+    box-shadow: 1px 2px 2px 1px #5A5A5A;
 }
 
 .container-nav {
