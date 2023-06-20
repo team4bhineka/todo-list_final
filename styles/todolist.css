@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+html {
+  background-color: #D9F0F4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container-card {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 25px 5%;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 3px 3px 3px 3px #5A5A5A;
+  width: 100%;
+  max-width: 1200px;
+  height: max-content;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 400px;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 45px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: solid;
+  background-color: white;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  background-color: white;
+  font-weight: bold;
+}
+
+.form-input {
+  margin: 25px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  margin: 0 10.5%;
+}
+
+#inputText {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  border-color: grey;
+  border-style: solid;
+}
+
+#selectStatus {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  border-color: grey;
+  border-style: solid;
+}
+
+#selectStatus:invalid {
+  color: gray;
+}
+
+#selectColor {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  border-color: grey;
+  border-style: solid;
+}
+
+#selectColor:invalid {
+  color: gray;
+}
+
+.inputTime input {
+  width: 196px;
+  height: 50px;
+  border-radius: 10px;
+  border-color: grey;
+  border-style: solid;
+}
+
+.inputTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+#submitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 253px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  border-color: transparent;
+  border-style: solid;
+  margin: 0 38%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#submitbtn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.datacontainer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin: 10px 10.5%;
+}
+
+.datatask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  border-radius: 10px;
+  width: 950px;
+  padding: 0 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.activityColumn {
+  flex: 10% 0 0;
+}
+
+.listaction {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+}
+
+.delete {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+}
+
+.form-data input {
+  background-color: black;
+  color: white;
+}
+
+#editButton {
+  width: 55px;
+  height: 25px;
+  background-color: #87CEEB;
+  color: white;
+  border: transparent;
+  border-radius: 7px;
+  transition-duration: 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#editButton:hover {
+  background-color: #4ab2dc;
+  color: white;
+}
+
+
+#deleteButton {
+  width: 55px;
+  height: 25px;
+  background-color: #FF6347;
+  color: white;
+  border: transparent;
+  border-radius: 7px;
+  transition-duration: 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#deleteButton:hover {
+  background-color: #cc3d26;
+  color: white;
+}
+
+input[type=checkbox]+label {
+  /* display: block; */
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]+label:before {
+  content: "\2714";
+  border-radius: 5px;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: white;
+  background-color: #526D82;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type=checkbox]:hover+label:before {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.completed .listaction {
+  display: none;
+}
+
+.custom-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-alert {
+  background-color: #FF6347;
+  color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1320px) {
+
+  .container-card {
+    padding: 30px 0;
+    margin: 15px 0;
+    border-radius: 30px;
+    box-shadow: 1px 2px 2px 1px #5A5A5A;
+  }
+
+  .container-nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav ul li {
+    font-size: 18px
+  }
+
+  .form-data {
+    display: relative;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  #editButton {
+    width: 49px;
+    height: 20px;
+    background-color: #87CEEB;
+    color: white;
+    margin: 15px 0;
+    border: transparent;
+    border-radius: 7px;
+    transition-duration: 0.2s;
+  }
+
+  #deleteButton {
+    width: 48px;
+    height: 20px;
+    background-color: #FF6347;
+    color: white;
+    border: transparent;
+    margin: 15px 0;
+    border-radius: 7px;
+    transition-duration: 0.2s;
+  }
+
+  @media (max-width: 1000px) {
+
+    .form-data {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+  }
+
+  @media (max-width: 700px) {
+
+    #submitbtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 140px;
+      height: 35px;
+      border-radius: 10px;
+      font-size: 10px;
+      transition-duration: 0.2s;
+      border-color: transparent;
+      border-style: solid;
+      margin: 0 35%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    .datacontainer {
+      display: relative;
+      justify-content: center;
+      height: 30px;
+      margin: 10px 30%
+    }
+
+    .datatask {
+      display: relative;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      gap: 10px;
+      border-radius: 10px;
+      width: 450px;
+      padding: 0 10px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 458px) {
+    .datacontainer {
+      display: relative;
+      justify-content: center;
+      height: 30px;
+      margin: 10px 30%
+    }
+
+    .datatask {
+      display: relative;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      gap: 10px;
+      border-radius: 10px;
+      width: 350px;
+      padding: 0 5px;
+    }
+
+    .activityColoumn {
+      font-size: 10px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 393px) {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 8px;
+    }
+  }
+}

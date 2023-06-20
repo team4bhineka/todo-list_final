@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+html{
+  background-color: #D9F0F4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
+}
+
+ body {
+  display: flex;
+  justify-content: center;
+ }
+
+.container-card {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 25px 0;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 3px 3px 3px 3px #5A5A5A;
+  width: 100%; /* Menggunakan persentase agar mengikuti lebar kontainer induk */
+  max-width: 1200px;
+  height: auto;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  width:100%;
+  gap: 400px;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 45px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: solid;
+  background-color: white;
+  color: black;
+}
+
+a:hover{
+  text-decoration: underline;
+  background-color: white;
+  font-weight: bold;
+  }
+
+.button{
+  margin: 2em;
+  padding: 1em;
+  width: 200px;
+  font-size: medium;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 100px auto;
+  padding: 10px;
+  width: fit-content;
+  height: auto;
+  
+}
+
+.isi{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.tagline{
+  font-size: 20px;
+  font-weight: lighter;;
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px){
+  .container-card {
+    padding: 30px 0;
+    margin: 15px 0;
+    border-radius: 30px;
+    box-shadow: 1px 2px 2px 1px #5A5A5A;
+}
+
+.container-nav {
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+header {
+  flex-direction:row;
+  justify-content: space-around; 
+  gap: 20px; 
+  text-align: center; 
+}
+
+header h1 {
+  font-size: 25px; 
+}
+
+nav ul {
+  flex-direction: row;
+  gap: 10px; 
+  text-align: center; 
+}
+
+nav ul li {
+  font-size: 18px; 
+}
+
+.content {
+  margin: 100px auto;
+  padding: 5px;
+}
+
+.isi {
+  font-size: 15px;
+}
+
+.tagline{
+  font-size: 10px;
+}
+
+.button{
+  margin: 1em;
+  padding: 0.5em;
+  background-color: white;
+  border-radius: 50px;
+  font-size: smaller;
+  width: 100px;
+  margin: 2em;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+}
+
+}
+
