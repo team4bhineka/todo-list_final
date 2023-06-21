@@ -36,9 +36,34 @@ let acceptData = () => {
 
   localStorage.setItem("data", JSON.stringify(data));
 
-  console.log(data);
   createTasks();
 };
+
+// let createTasks = () => {
+//   formData.innerHTML = "";
+//   data.map((x, y) => {
+//     const completedClass = x.status === 'done' ? 'completed' : '';
+//     return (formData.innerHTML += `
+//       <div class="datacontainer ${completedClass}" id=${y}>
+//         <ul class="datatask" style="background-color: ${x.color}">
+//           <li class="activityColumn">${x.text}</li>
+//           <li style = "flex: 5% 0 0;">${x.status}</li>
+//           <li style = "flex: 10% 0 0;">${formatDateTime(x.time2)}</li>
+//           <li class="listaction">
+//             <input type="checkbox" id="done${y}" onchange="toggleCompleted
+//             (this, ${y})" ${x.status === 'done' ? 'checked' : ''}>
+//             <label for="done${y}"></label>
+//             <button id="editButton" onClick="editTask(this)">edit</button>
+//             <li class="delete id="deleteButton"> 
+//             <button id="deleteButton" onClick="deleteTask(this);createTasks()">delete</button>
+//           </li>
+//         </ul>
+//       </div>
+//     `);
+//   });
+
+//   resetForm();
+// };
 
 let createTasks = () => {
   formData.innerHTML = "";
@@ -48,16 +73,13 @@ let createTasks = () => {
       <div class="datacontainer ${completedClass}" id=${y}>
         <ul class="datatask" style="background-color: ${x.color}">
           <li class="activityColumn">${x.text}</li>
-          <li style = "flex: 5% 0 0;">${x.status}</li>
-          <li style = "flex: 10% 0 0;">${formatDateTime(x.time2)}</li>
-          <li class="listaction">
-            <input type="checkbox" id="done${y}" onchange="toggleCompleted
-            (this, ${y})" ${x.status === 'done' ? 'checked' : ''}>
-            <label for="done${y}"></label>
-            <button id="editButton" onClick="editTask(this)">edit</button>
-            <li class="delete id="deleteButton"> 
-            <button id="deleteButton" onClick="deleteTask(this);createTasks()">delete</button>
-          </li>
+          <li class="statusColumn">${x.status}</li>
+          <li class="dateColumn">${formatDateTime(x.time2)}</li>
+          <li class="editBtnAction"><button id="editButton" onClick="editTask(this)">edit</button></li>
+          <li class="deleteBtnAction"><button id="deleteButton" onClick="deleteTask(this);createTasks()">delete</button></li>
+          <li class="checkBtnAction"class="listaction"> <input type="checkbox" id="done${y}" onchange="toggleCompleted
+          (this, ${y})" ${x.status === 'done' ? 'checked' : ''}>
+          <label for="done${y}"></label></li>
         </ul>
       </div>
     `);
@@ -72,8 +94,6 @@ let toggleCompleted = (checkbox, taskId) => {
   localStorage.setItem("data", JSON.stringify(data));
   createTasks();
 };
-
-
 
 
 let deleteTask = (e) => {
@@ -138,7 +158,6 @@ let formatDateTime = (dateTimeString) => {
 
 (() => {
   data = JSON.parse(localStorage.getItem("data")) || []
-  console.log(data);
   createTasks();
 })();
 

@@ -79,9 +79,16 @@ a:hover{
   font-size: medium;
   color: white;
   background-color: black;
-  border-radius: 20px;
+  border-radius: 15px;
+  border-color: transparent;
   cursor: pointer;
   transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover{
+  background-color: #D9F0F4;
+  color: black;
 }
 
 .content {
